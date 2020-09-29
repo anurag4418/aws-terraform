@@ -1,15 +1,15 @@
 output "id" {
-  value       = aws_vpc.uat-vpc.id
+  value       = aws_vpc.prod-vpc.id
   description = "VPC ID"
 }
 
 output "public_subnet_ids" {
-  value       = aws_subnet.uat-pub-subnet.*.id
+  value       = aws_subnet.prod-pub-subnet.*.id
   description = "List of public subnet IDs"
 }
 
 output "private_subnet_ids" {
-  value       = aws_subnet.uat-pri-subnet.*.id
+  value       = aws_subnet.prod-pri-subnet.*.id
   description = "List of private subnet IDs"
 }
 
@@ -36,6 +36,6 @@ output "webserver_hostname" {
 }*/
 
 output "elb-dns-name" {
-  value       = aws_elb.uat-lb.dns_name
+  value       = aws_elb.prod-lb.dns_name
   description = "Public DNS name of LB"
 }
